@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  playground:
+    build: ./java
+    image: java-playground:latest
+    container_name: java-playground
+    working_dir: /workspace/src
+    entrypoint: /bin/sh run.sh
+    volumes:
+      - ./workspace/src:/workspace/src
