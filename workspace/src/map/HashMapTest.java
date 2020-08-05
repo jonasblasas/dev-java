@@ -33,5 +33,12 @@ public class HashMapTest {
         }
 
         myMap.forEach((key,value) -> System.out.println(key + " = " + value));
+
+        for(Map.Entry<String, Integer> entry : myMap.entrySet()) {
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+        
+            System.out.println(key + " = " + value);
+        }
     }
 }
